@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>Edit Autor</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <form (ngSubmit)="updateAutor(autor._id)" #autorForm="ngForm">
+        <div class="form-group">
+          <label for="name">Nombre</label>
+          <input type="text" class="form-control" [(ngModel)]="autor.nombre" name="nombre" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Curso</label>
+          <input type="text" class="form-control" [(ngModel)]="autor.curso" name="curso" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Cuatrimestre</label>
+          <input type="text" class="form-control" [(ngModel)]="autor.cuatrimestre" name="cuatrimestre" required>
+        </div> 
+        <div class="form-group">
+          <button type="submit" class="btn btn-success" [disabled]="!autorForm.form.valid">Update</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
